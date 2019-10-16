@@ -1,26 +1,7 @@
 import {createStore} from 'redux';
+//reducer é chamado de forma automatica em alguns momentos pelo redux
+//
+import rootReducer from './reducers';
 
-function reducer(){
-    return [
-        {
-            id: 1, 
-            title: "iniciando com React", 
-            lessons: [
-                { id: 1, title: 'Primeira aula' },
-                { id: 2, title: 'Segunda aula' }
-            ]
-        },
-        {
-            id: 2, 
-            title: 'Aprendendo Redux', 
-            lessons:[
-                { id: 3, title: 'Terceira aula' },
-                { id: 4, title: 'Quarta aula' },
-            ]
-        }
-    ];
-}
-
-const store = createStore(reducer);
-
+const store = createStore(rootReducer);
 export default store;
